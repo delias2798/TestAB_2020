@@ -1,0 +1,22 @@
+{
+    "startText": "Bienvenido",
+    "startButtonLabel": "Iniciar",
+    "endText": "Hope you learned about Manatees",
+    "endButtonLabel": "Finalizar",
+    "previousButtonLabel": "<",
+    "nextButtonLabel": ">",
+    "dataList": [
+        {
+            "tittle": "Información General:",
+            "info": "Los manatíes son los únicos mamíferos marinos exclusivamente herbívoros y se alimentan principalmente de una variedad de plantas acuáticas. \n Algunas de las plantas específicas que consumen incluyen Paspalum repens (gamalote), Urochloa mutica (pará), Eichhornia crassipes (choreja), Ludwigia helminthorrhiza (lirio rosa) y Hydrocotyle ranunculoides (comalillo)."
+        },
+        {
+            "tittle": "Información General:",
+            "info": "El manatí antillano (Trichechus manatus manatus) está catalogado como \"en peligro de extinción\" por la Unión Internacional para la Conservación de la Naturaleza (UICN). \n Son mamíferos subungulados, herbívoros, adaptados a la vida acuática con un cuerpo fusiforme y extremidades convertidas en aletas para la propulsión."
+        },
+        {
+            "tittle": "Comportamiento y Ecología",
+            "info": "Los manatíes pasan casi la mitad de su tiempo descansando, un comportamiento típico para la especie. \n Los manatíes individuales muestran diferencias considerable en sus patrones de comportamiento; algunos son más activos y prefieren explorar."
+        }
+    ]
+}
