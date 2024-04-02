@@ -18,9 +18,25 @@ public class PanelInfoBehaviour : MonoBehaviour
     public UnityEvent StartEvent;
     public UnityEvent EndEvent;
 
+    private float timeElapsed = 0f;
+    private bool timerActive = false;
+
     void Start()
     {
         LoadData();
+        if (panels.Count > 0)
+        {
+            panels[0].SetActive(true);
+            timerActive = true; // Inicia el temporizador
+        }
+    }
+
+    void Update()
+    {
+        if (timerActive)
+        {
+            timeElapsed += Time.deltaTime;
+        }
     }
 
     void LoadData()
@@ -98,6 +114,12 @@ public class PanelInfoBehaviour : MonoBehaviour
         manateeAnimator.SetTrigger("PointTrigger");
         panels[currentPanelIndex].SetActive(false);
         Trivia.SetActive(true);
+        timerActive = false;
+    }
+
+    public float GetTimeElapsed()
+    {
+        return timeElapsed;
     }
 
     [Serializable]

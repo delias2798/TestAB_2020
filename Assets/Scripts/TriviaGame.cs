@@ -21,10 +21,14 @@ public class TriviaGame : MonoBehaviour
     private int wrongs;
     private string[] answersList;
     private List<string> list;
+    public PanelInfoBehaviour panelInfoBehaviour;
 
     public UnityEvent TriviStarEvent;
     public UnityEvent TriviaEndEvent;
     public Animator manateeAnimator;
+    private float triviaStartTime;
+    private float triviaTotalTime;
+
 
     void Start()
     {
@@ -102,6 +106,7 @@ public class TriviaGame : MonoBehaviour
 
     public void startTrivia()
     {
+        triviaStartTime = Time.time;
         PanelStart.SetActive(false);
         panels[0].SetActive(true);
     }
@@ -138,6 +143,7 @@ public class TriviaGame : MonoBehaviour
         }
         else
         {
+            triviaTotalTime = Time.time - triviaStartTime;
             TextMeshProUGUI panelEndText = PanelEnd.GetComponentInChildren<TextMeshProUGUI>();
             panelEndText.text += "\nCorrect Answers: " + corrects;
             PanelEnd.SetActive(true);
@@ -163,6 +169,8 @@ public class TriviaGame : MonoBehaviour
         replies.corrects = corrects;
         replies.wrongs = wrongs;
         replies.repliesRecord = list;
+        replies.timePanelInfo = panelInfoBehaviour.GetTimeElapsed();
+        replies.timeTrivia = triviaTotalTime;
 
         results.totalCorrect += corrects;
         results.totalWrong += wrongs;
@@ -207,5 +215,7 @@ public class TriviaGame : MonoBehaviour
         public int corrects;
         public int wrongs;
         public List<string> repliesRecord;
+        public float timePanelInfo;
+        public float timeTrivia;
     }
 }

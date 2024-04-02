@@ -209,7 +209,7 @@ PrefabInstance:
     - target: {fileID: 3135134128326893051, guid: 4417a6ae80f1b0c42b682a80ff2537d1,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6663425428251432927, guid: 4417a6ae80f1b0c42b682a80ff2537d1,
         type: 3}
@@ -361,6 +361,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: manateeCartoon Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 1186102540189428170, guid: 640140a102f567747ac3c3273d65bc81,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1963060729890059120, guid: 640140a102f567747ac3c3273d65bc81,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -450,12 +455,6 @@ PrefabInstance:
 --- !u!4 &1011960996 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1963060729890059120, guid: 640140a102f567747ac3c3273d65bc81,
-    type: 3}
-  m_PrefabInstance: {fileID: 1011960995}
-  m_PrefabAsset: {fileID: 0}
---- !u!95 &1011960997 stripped
-Animator:
-  m_CorrespondingSourceObject: {fileID: 636878409, guid: 640140a102f567747ac3c3273d65bc81,
     type: 3}
   m_PrefabInstance: {fileID: 1011960995}
   m_PrefabAsset: {fileID: 0}
@@ -666,7 +665,7 @@ MonoBehaviour:
   PanelPrefab: {fileID: 2979052392613444616, guid: 7aece2ccf0bad5e49ab323407df33479,
     type: 3}
   Trivia: {fileID: 3531096076789141956}
-  manateeAnimator: {fileID: 1011960997}
+  manateeAnimator: {fileID: 2069434701}
   StartEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -975,7 +974,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0, y: 6e-44, z: 4.3e-44, w: 6.679e-42}
+  m_BoundingSphereOverride: {x: 1.02e-43, y: 2.1e-44, z: 4.288e-42, w: 0}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
@@ -1672,6 +1671,12 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 4076919437921363802, guid: 2ad398c3bfa375f40a884ca8aaaf0385,
     type: 3}
   m_PrefabInstance: {fileID: 690415840521688425}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &2069434701 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 451273613, guid: 4417a6ae80f1b0c42b682a80ff2537d1,
+    type: 3}
+  m_PrefabInstance: {fileID: 260401136}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &690415840521688425
 PrefabInstance:
@@ -2759,13 +2764,14 @@ MonoBehaviour:
     type: 3}
   buttonPrefab: {fileID: 2763076704731903580, guid: a549ccb0af3cd1c4688b2b5c88164d64,
     type: 3}
+  panelInfoBehaviour: {fileID: 1138350173}
   TriviStarEvent:
     m_PersistentCalls:
       m_Calls: []
   TriviaEndEvent:
     m_PersistentCalls:
       m_Calls: []
-  manateeAnimator: {fileID: 1011960997}
+  manateeAnimator: {fileID: 2069434701}
 --- !u!1 &3531096076828006060
 GameObject:
   m_ObjectHideFlags: 0
@@ -3141,6 +3147,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4248636303396232382, guid: b1475192e614253438ac7065b5c76f69,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.92
+      objectReference: {fileID: 0}
+    - target: {fileID: 4248636303396232382, guid: b1475192e614253438ac7065b5c76f69,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.02
       objectReference: {fileID: 0}
     - target: {fileID: 4305524864123014145, guid: b1475192e614253438ac7065b5c76f69,
         type: 3}
