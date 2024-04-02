@@ -665,6 +665,7 @@ MonoBehaviour:
   PanelPrefab: {fileID: 2979052392613444616, guid: 7aece2ccf0bad5e49ab323407df33479,
     type: 3}
   Trivia: {fileID: 3531096076789141956}
+  jsonDataFileName: data
   manateeAnimator: {fileID: 2069434701}
   StartEvent:
     m_PersistentCalls:
@@ -974,7 +975,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 1.02e-43, y: 2.1e-44, z: 4.288e-42, w: 0}
+  m_BoundingSphereOverride: {x: 1.02e-43, y: 3e-45, z: 1.8392e-41, w: 0}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
@@ -2764,6 +2765,8 @@ MonoBehaviour:
     type: 3}
   buttonPrefab: {fileID: 2763076704731903580, guid: a549ccb0af3cd1c4688b2b5c88164d64,
     type: 3}
+  triviaJSONName: trivia
+  messageFinalResults: Respuestas correctas
   panelInfoBehaviour: {fileID: 1138350173}
   TriviStarEvent:
     m_PersistentCalls:
@@ -2772,6 +2775,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   manateeAnimator: {fileID: 2069434701}
+  cartoonizeManatee: 0
 --- !u!1 &3531096076828006060
 GameObject:
   m_ObjectHideFlags: 0

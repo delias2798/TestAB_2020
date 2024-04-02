@@ -13,6 +13,8 @@ public class TriviaGame : MonoBehaviour
     public GameObject PanelEnd;
     public GameObject PanelPrefab;
     public GameObject buttonPrefab;
+    public string triviaJSONName = "trivia";
+    public string messageFinalResults = "Respuestas correctas";
     private GameObject Panel;
     private int currentPanelIndex = 0;
     private List<GameObject> panels = new List<GameObject>();
@@ -26,9 +28,9 @@ public class TriviaGame : MonoBehaviour
     public UnityEvent TriviStarEvent;
     public UnityEvent TriviaEndEvent;
     public Animator manateeAnimator;
+    public bool cartoonizeManatee;
     private float triviaStartTime;
     private float triviaTotalTime;
-
 
     void Start()
     {
@@ -37,9 +39,14 @@ public class TriviaGame : MonoBehaviour
         list = new List<string> {};
 
         string jsonString;
-        string jsonPath = Path.Combine(Application.streamingAssetsPath, "trivia.json");
+        string jsonPath = Path.Combine(Application.streamingAssetsPath, triviaJSONName + ".json");
         // filePath = Path.Combine(Application.streamingAssetsPath, "results.json");
-        filePath = Path.Combine(Application.persistentDataPath, "results.json");
+
+        if (cartoonizeManatee){
+            filePath = Path.Combine(Application.persistentDataPath, "resultsCartoon.json");
+        } else {
+            filePath = Path.Combine(Application.persistentDataPath, "resultsRealistic.json");
+        }
 
 
         if (File.Exists(jsonPath))
@@ -121,7 +128,6 @@ public class TriviaGame : MonoBehaviour
     {
         if (correctAnswer == userAnswer)
         {
-            Debug.Log("Correct!");
             corrects++;
             list.Add("correct");
             manateeAnimator.SetTrigger("YesTrigger");
@@ -129,7 +135,6 @@ public class TriviaGame : MonoBehaviour
         else
         {
             wrongs++;
-            Debug.Log("Incorrect!");
             list.Add("incorrect");
             manateeAnimator.SetTrigger("NoTrigger");
         }
@@ -145,7 +150,7 @@ public class TriviaGame : MonoBehaviour
         {
             triviaTotalTime = Time.time - triviaStartTime;
             TextMeshProUGUI panelEndText = PanelEnd.GetComponentInChildren<TextMeshProUGUI>();
-            panelEndText.text += "\nCorrect Answers: " + corrects;
+            panelEndText.text += "\n" + messageFinalResults + ": " + corrects;
             PanelEnd.SetActive(true);
             SaveResults();
         }

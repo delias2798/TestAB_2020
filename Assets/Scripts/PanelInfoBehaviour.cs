@@ -13,7 +13,8 @@ public class PanelInfoBehaviour : MonoBehaviour
     public GameObject Trivia;
     private List<GameObject> panels = new List<GameObject>();
     private int currentPanelIndex = 0;
-    private string jsonPath = Path.Combine(Application.streamingAssetsPath, "data.json");
+    private string jsonPath;
+    public string jsonDataFileName = "data";
     public Animator manateeAnimator = null;
     public UnityEvent StartEvent;
     public UnityEvent EndEvent;
@@ -23,6 +24,7 @@ public class PanelInfoBehaviour : MonoBehaviour
 
     void Start()
     {
+        jsonPath = Path.Combine(Application.streamingAssetsPath, jsonDataFileName + ".json");
         LoadData();
         if (panels.Count > 0)
         {
