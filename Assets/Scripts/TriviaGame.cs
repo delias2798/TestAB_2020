@@ -36,10 +36,12 @@ public class TriviaGame : MonoBehaviour
     {
         // string jsonPath = "trivia.json";
         // string jsonString = BetterStreamingAssets.ReadAllText(jsonPath);
+        BetterStreamingAssets.Initialize();
+        
         list = new List<string> {};
 
         string jsonString;
-        string jsonPath = Path.Combine(Application.streamingAssetsPath, triviaJSONName + ".json");
+        string jsonPath = triviaJSONName + ".json";
         // filePath = Path.Combine(Application.streamingAssetsPath, "results.json");
 
         if (cartoonizeManatee){
@@ -49,9 +51,9 @@ public class TriviaGame : MonoBehaviour
         }
 
 
-        if (File.Exists(jsonPath))
+        if (BetterStreamingAssets.FileExists(jsonPath))
         {
-            jsonString = File.ReadAllText(jsonPath);
+            jsonString = BetterStreamingAssets.ReadAllText(jsonPath);
         }
         else
         {

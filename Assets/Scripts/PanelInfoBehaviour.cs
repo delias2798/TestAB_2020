@@ -24,7 +24,8 @@ public class PanelInfoBehaviour : MonoBehaviour
 
     void Start()
     {
-        jsonPath = Path.Combine(Application.streamingAssetsPath, jsonDataFileName + ".json");
+        BetterStreamingAssets.Initialize();
+        jsonPath = jsonDataFileName + ".json";
         LoadData();
         if (panels.Count > 0)
         {
@@ -43,9 +44,9 @@ public class PanelInfoBehaviour : MonoBehaviour
 
     void LoadData()
     {
-        if (File.Exists(jsonPath))
+        if (BetterStreamingAssets.FileExists(jsonPath))
         {
-            string jsonString = File.ReadAllText(jsonPath);
+            string jsonString = BetterStreamingAssets.ReadAllText(jsonPath);
             Data data = JsonUtility.FromJson<Data>(jsonString);
 
             InitializeDataPanels(data);
