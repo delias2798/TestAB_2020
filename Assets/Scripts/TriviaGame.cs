@@ -122,7 +122,7 @@ public class TriviaGame : MonoBehaviour
 
     public void endTrivia()
     {
-        PanelEnd.SetActive(false);
+        //PanelEnd.SetActive(false);
         TriviaEndEvent.Invoke();
         Debug.Log("Trivia completed!");
     }
@@ -152,6 +152,8 @@ public class TriviaGame : MonoBehaviour
         {
             triviaTotalTime = Time.time - triviaStartTime;
             TextMeshProUGUI panelEndText = PanelEnd.GetComponentInChildren<TextMeshProUGUI>();
+            Button panelEndButton = PanelEnd.GetComponentInChildren<Button>();
+            panelEndButton.gameObject.SetActive(false);
             panelEndText.text += "\n" + messageFinalResults + ": " + corrects;
             PanelEnd.SetActive(true);
             SaveResults();

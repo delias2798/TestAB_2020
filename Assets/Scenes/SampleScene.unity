@@ -209,7 +209,7 @@ PrefabInstance:
     - target: {fileID: 3135134128326893051, guid: 4417a6ae80f1b0c42b682a80ff2537d1,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6663425428251432927, guid: 4417a6ae80f1b0c42b682a80ff2537d1,
         type: 3}
@@ -735,7 +735,7 @@ PrefabInstance:
     - target: {fileID: 1186102540189428170, guid: 640140a102f567747ac3c3273d65bc81,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1963060729890059120, guid: 640140a102f567747ac3c3273d65bc81,
         type: 3}
@@ -826,6 +826,12 @@ PrefabInstance:
 --- !u!4 &1011960996 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1963060729890059120, guid: 640140a102f567747ac3c3273d65bc81,
+    type: 3}
+  m_PrefabInstance: {fileID: 1011960995}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &1011960997 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 636878409, guid: 640140a102f567747ac3c3273d65bc81,
     type: 3}
   m_PrefabInstance: {fileID: 1011960995}
   m_PrefabAsset: {fileID: 0}
@@ -1037,7 +1043,7 @@ MonoBehaviour:
     type: 3}
   Trivia: {fileID: 3531096076789141956}
   jsonDataFileName: data
-  manateeAnimator: {fileID: 2069434701}
+  manateeAnimator: {fileID: 1011960997}
   StartEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -2230,12 +2236,6 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 690415840521688425}
   m_PrefabAsset: {fileID: 0}
---- !u!95 &2069434701 stripped
-Animator:
-  m_CorrespondingSourceObject: {fileID: 451273613, guid: 4417a6ae80f1b0c42b682a80ff2537d1,
-    type: 3}
-  m_PrefabInstance: {fileID: 260401136}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &690415840521688425
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2520,6 +2520,11 @@ PrefabInstance:
       propertyPath: m_fontSizeMax
       value: 48
       objectReference: {fileID: 0}
+    - target: {fileID: 1228289128520252298, guid: d20661770691eab40ac6768d775d4a43,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -333.99997
+      objectReference: {fileID: 0}
     - target: {fileID: 1228289128931475205, guid: d20661770691eab40ac6768d775d4a43,
         type: 3}
       propertyPath: m_Color.a
@@ -2639,6 +2644,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5116227352232901489, guid: d20661770691eab40ac6768d775d4a43,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 36
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3331,8 +3341,8 @@ MonoBehaviour:
   TriviaEndEvent:
     m_PersistentCalls:
       m_Calls: []
-  manateeAnimator: {fileID: 2069434701}
-  cartoonizeManatee: 0
+  manateeAnimator: {fileID: 1011960997}
+  cartoonizeManatee: 1
 --- !u!1 &3531096076828006060
 GameObject:
   m_ObjectHideFlags: 0

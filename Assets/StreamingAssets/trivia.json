@@ -1,7 +1,7 @@
 {
-    "tittle": "Iniciaremos una trivia con 3 respuestas para cada pregunta, al finalizar se mostrara la cantidad de aciertos",
-    "startButtonName": "Inciar",
-    "endTittle": "Esperamos que hayas aprendido sobre los Manatees",
+    "tittle": "Iniciaremos una trivia con 3 respuestas para cada pregunta, al finalizar se mostrará la cantidad de aciertos",
+    "startButtonName": "Iniciar",
+    "endTittle": "Esperamos que hayas aprendido sobre los Manatíes",
     "endButtonName": "Finalizar",
     "questionList": [
         {
@@ -33,11 +33,11 @@
             "correct": 2
         },
         {
-            "question": "¿Cuál es una de las principales amenazas para la conservación de los manatíes en Costa Rica? ",
+            "question": "¿Cuál NO es una de las principales amenazas para la conservación de los manatíes en Costa Rica? ",
             "option1": "Sobrepesca ",
             "option2": "Contaminación por pesticidas ",
             "option3": "Cambio climático",
-            "correct": 1
+            "correct": 2
         },
         {
             "question": "¿Qué especie de manatí se encuentra en las aguas de Costa Rica? ",
