@@ -24,11 +24,15 @@ public class TriviaGame : MonoBehaviour
     private string[] answersList;
     private List<string> list;
     public PanelInfoBehaviour panelInfoBehaviour;
+    public Animator manateeAnimator;
+    public bool cartoonizeManatee;
+    public bool testRun = false;
+    public string resultsCartoonJSONName = "resultsCartoon";
+    public string resultsRealisticJSONName = "resultsRealistic";
+    public string resultsTestJSONName = "resultsTest";
 
     public UnityEvent TriviStarEvent;
     public UnityEvent TriviaEndEvent;
-    public Animator manateeAnimator;
-    public bool cartoonizeManatee;
     private float triviaStartTime;
     private float triviaTotalTime;
 
@@ -44,10 +48,14 @@ public class TriviaGame : MonoBehaviour
         string jsonPath = triviaJSONName + ".json";
         // filePath = Path.Combine(Application.streamingAssetsPath, "results.json");
 
-        if (cartoonizeManatee){
-            filePath = Path.Combine(Application.persistentDataPath, "resultsCartoon.json");
+        if (!testRun){
+            if (cartoonizeManatee){
+                filePath = Path.Combine(Application.persistentDataPath, resultsCartoonJSONName + ".json");
+            } else {
+                filePath = Path.Combine(Application.persistentDataPath, resultsRealisticJSONName + ".json");
+            }
         } else {
-            filePath = Path.Combine(Application.persistentDataPath, "resultsRealistic.json");
+            filePath = Path.Combine(Application.persistentDataPath, resultsTestJSONName + ".json");
         }
 
 

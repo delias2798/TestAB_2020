@@ -850,7 +850,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1087341110
 Transform:
   m_ObjectHideFlags: 0
@@ -1042,7 +1042,7 @@ MonoBehaviour:
   PanelPrefab: {fileID: 2979052392613444616, guid: 7aece2ccf0bad5e49ab323407df33479,
     type: 3}
   Trivia: {fileID: 3531096076789141956}
-  jsonDataFileName: data
+  jsonDataFileName: dataTest
   manateeAnimator: {fileID: 1011960997}
   StartEvent:
     m_PersistentCalls:
@@ -3332,17 +3332,21 @@ MonoBehaviour:
     type: 3}
   buttonPrefab: {fileID: 2763076704731903580, guid: a549ccb0af3cd1c4688b2b5c88164d64,
     type: 3}
-  triviaJSONName: trivia
+  triviaJSONName: triviaTest
   messageFinalResults: Respuestas correctas
   panelInfoBehaviour: {fileID: 1138350173}
+  manateeAnimator: {fileID: 1011960997}
+  cartoonizeManatee: 1
+  testRun: 1
+  resultsCartoonJSONName: resultsCartoon
+  resultsRealisticJSONName: resultsRealistic
+  resultsTestJSONName: resultsTest
   TriviStarEvent:
     m_PersistentCalls:
       m_Calls: []
   TriviaEndEvent:
     m_PersistentCalls:
       m_Calls: []
-  manateeAnimator: {fileID: 1011960997}
-  cartoonizeManatee: 1
 --- !u!1 &3531096076828006060
 GameObject:
   m_ObjectHideFlags: 0
