@@ -8,10 +8,10 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/SampleScene.unity
     guid: 55daccc09a3b69647bbab145b54a3ab3
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/RealisticScene.unity
     guid: 2301ba936091a6949b017c236c6f3457
-  - enabled: 1
+  - enabled: 0
     path: Assets/Samples/Tobii XR SDK/3.0.1/Getting Started/Example_GettingStarted.unity
     guid: 221a337531f80eb4eb510b1cd2874c53
   m_configObjects:

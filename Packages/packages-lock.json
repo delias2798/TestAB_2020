@@ -143,6 +143,15 @@
         "com.unity.searcher": "4.9.2"
       }
     },
+    "com.unity.subsystemregistration": {
+      "version": "1.1.1",
+      "depth": 1,
+      "source": "registry",
+      "dependencies": {
+        "com.unity.modules.subsystems": "1.0.0"
+      },
+      "url": "https://packages.unity.com"
+    },
     "com.unity.test-framework": {
       "version": "1.1.33",
       "depth": 0,
@@ -241,15 +250,6 @@
       },
       "url": "https://packages.unity.com"
     },
-    "com.unity.xr.oculus": {
-      "version": "4.1.2",
-      "depth": 0,
-      "source": "registry",
-      "dependencies": {
-        "com.unity.xr.management": "4.4.0"
-      },
-      "url": "https://packages.unity.com"
-    },
     "com.unity.xr.openxr": {
       "version": "1.10.0",
       "depth": 0,
@@ -263,12 +263,14 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.xr.picoxr": {
-      "version": "file:C:/Users/DELIA/Documents/TEC/I Semestre 2024/Proyecto de Diseno/PICO Unity Integration SDK 240",
+      "version": "file:C:/Users/DELIA/Documents/TEC/I Semestre 2024/Proyecto de Diseno/PICO Unity Integration SDK_215",
       "depth": 0,
       "source": "local",
       "dependencies": {
-        "com.unity.xr.management": "4.0.0",
-        "com.unity.xr.interaction.toolkit": "2.0.0"
+        "com.unity.xr.management": "3.2.16",
+        "com.unity.ugui": "1.0.0",
+        "com.unity.subsystemregistration": "1.0.6",
+        "com.unity.xr.interaction.toolkit": "0.9.4-preview"
       }
     },
     "com.unity.modules.ai": {
